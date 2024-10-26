@@ -77,7 +77,7 @@ export default class ProdutoDAO{
         const [registros, campos] = await conexao.query(sql);
         let listaProdutos=[];
         for (const registro of registros){
-            const servico = new Servico(registro['id'],
+            const produto = new Produtos(registro['id'],
                                         registro['nome'],
                                         registro['pet'],
                                         registro['descricao'],
